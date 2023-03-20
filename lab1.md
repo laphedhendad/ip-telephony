@@ -67,7 +67,7 @@ Router#config terminal
 
 ![Switch](https://user-images.githubusercontent.com/52206303/226185431-3541ee4d-1883-4630-92a4-bf14fc533823.png)
 
-Включаем все VLAN интерфейсы на коммуттаоре и маршрутизаторе:
+Включаем все VLAN интерфейсы на коммутаторе и маршрутизаторе:
 ```
 interface vlan1
 no shutdown
