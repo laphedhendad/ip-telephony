@@ -78,15 +78,36 @@ Date of finished: 19.03.2023
 
 ## Часть 2
 
-Во второй части лабораторной работы необходимо было настроить IP-телефонию в простой топологии из двух IP-телефонов, коммутатора и роутера с поддержкой Cisco CallManager Express (CME). Схема сети представлена на рисунке ниже:
+Во второй части лабораторной работы необходимо было собрать сеть по данной схеме с несколькими VLAN'ами:
 
-![Схема](https://user-images.githubusercontent.com/52206303/226194801-8d2429a6-d1fd-43f1-b1ec-6a96496e630d.png)
+![Схема](https://user-images.githubusercontent.com/52206303/226303705-dc75d9e2-fae8-4f6d-bd94-f2c3be9fc640.png)
 
-Чтобы изменять конфигурации устройст через терминал, необходимо зайти в привелигерованный режим:
-```
-Router>enable
-Router#config terminal
-```
+Создал три VLAN'а: Data, Voice и Managment:
+
+![VLANs](https://user-images.githubusercontent.com/52206303/226305846-b0bd2875-5fc2-4665-aa21-da2ed8718e0b.png)
+
+Настроил VLAN 30:
+
+![VLAN 30](https://user-images.githubusercontent.com/52206303/226306219-0ef23612-63e4-44af-b649-aef17d013c7e.png)
+
+Установил маршрут по умолчанию:
+
+![trunk](https://user-images.githubusercontent.com/52206303/226308135-94de9101-dc1e-44d9-b879-ea891e0cd6b1.png)
+
+![vlan 10 20](https://user-images.githubusercontent.com/52206303/226309182-6be8e9ea-8528-437c-8b39-560927800e81.png)
+
+![image](https://user-images.githubusercontent.com/52206303/226312393-9807d9bd-bd13-402a-ad72-16cfef410f3f.png)
+
+![image](https://user-images.githubusercontent.com/52206303/226312476-0e114586-6c87-4f9a-89df-45fba7cf8a0b.png)
+
+![image](https://user-images.githubusercontent.com/52206303/226312897-c36969f5-986e-4d05-9316-a3163aec54ae.png)
+
+![image](https://user-images.githubusercontent.com/52206303/226313567-1696b909-28f3-4691-8166-634c6f618aec.png)
+
+![image](https://user-images.githubusercontent.com/52206303/226314590-0926b5be-7d80-43fb-981f-948883652dcd.png)
+
+![image](https://user-images.githubusercontent.com/52206303/226315650-bfb2ea5d-4a1b-4c1a-9954-42d9e539b7ad.png)
+
 
 Теперь изменим имя роутера на CMERouter:
 
