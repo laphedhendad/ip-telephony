@@ -42,10 +42,10 @@ Date of finished: 19.03.2023
 ![Схема](https://user-images.githubusercontent.com/52206303/226194801-8d2429a6-d1fd-43f1-b1ec-6a96496e630d.png)
 
 Чтобы изменять конфигурации устройст через терминал, необходимо зайти в привелигерованный режим:
-'''
+```
 Router>enable
 Router#config terminal
-'''
+```
 
 Теперь изменим имя роутера на CMERouter:
 
@@ -68,10 +68,10 @@ Router#config terminal
 ![Switch](https://user-images.githubusercontent.com/52206303/226185431-3541ee4d-1883-4630-92a4-bf14fc533823.png)
 
 Включаем все VLAN интерфейсы на коммуттаоре и маршрутизаторе:
-'''
+```
 interface vlan1
 no shutdown
-'''
+```
 Проверим настройки отправив пинг с роутера на оба телефона:
 
 ![Пинги](https://user-images.githubusercontent.com/52206303/226195067-9ffca045-838e-4703-a32d-77095acf734a.png)
