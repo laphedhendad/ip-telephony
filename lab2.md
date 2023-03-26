@@ -94,27 +94,47 @@ Date of finished: 19.03.2023
 
 ![trunk](https://user-images.githubusercontent.com/52206303/226308135-94de9101-dc1e-44d9-b879-ea891e0cd6b1.png)
 
-![vlan 10 20](https://user-images.githubusercontent.com/52206303/226309182-6be8e9ea-8528-437c-8b39-560927800e81.png)
+Назначил режимам доступа access и voice свои VLAN'ы:
+
+![Switchport 1-3](https://user-images.githubusercontent.com/52206303/227767116-9fd42a82-a19c-44d8-b47c-0adfe80827a8.png)
+
+Создал логические подыинтерфейсы для VLAN'ов:
 
 ![image](https://user-images.githubusercontent.com/52206303/226312393-9807d9bd-bd13-402a-ad72-16cfef410f3f.png)
 
 ![image](https://user-images.githubusercontent.com/52206303/226312476-0e114586-6c87-4f9a-89df-45fba7cf8a0b.png)
 
+Исключил из DHCP-пула адреса маршрутизатора и DNS-сервера:
+
 ![image](https://user-images.githubusercontent.com/52206303/226312897-c36969f5-986e-4d05-9316-a3163aec54ae.png)
+
+Настроил DHCP для VLAN 10 и VLAN 20:
 
 ![image](https://user-images.githubusercontent.com/52206303/226313567-1696b909-28f3-4691-8166-634c6f618aec.png)
 
+Настроил сервис IP-телефонии:
+
 ![image](https://user-images.githubusercontent.com/52206303/226314590-0926b5be-7d80-43fb-981f-948883652dcd.png)
+
+Назначил номера телефонов:
 
 ![image](https://user-images.githubusercontent.com/52206303/226315650-bfb2ea5d-4a1b-4c1a-9954-42d9e539b7ad.png)
 
+Подключил телефоны к сервису:
+
+![image](https://user-images.githubusercontent.com/52206303/227768761-751d4f27-f6d8-498f-9bb0-4a9f003f61a8.png)
+
+Назначил компьютерам IP-адреса через DHCP:
+
 ![DHCP на PC](https://user-images.githubusercontent.com/52206303/227766836-8e722a6b-219b-4578-8692-f6302ad59e1a.png)
+
+Теперь можно проверить работоспособность системы. Протестируем звонок по сети VLAN 20:
 
 ![Звонок](https://user-images.githubusercontent.com/52206303/227766761-bb03eeab-dd3a-436e-9ffa-1c5cae681c0b.png)
 
-![Пинг](https://user-images.githubusercontent.com/52206303/227767002-12f83e48-e4e2-4c90-accc-f8525b308611.png)
+Протестируем передачу данных между компьютерами в сети VLAN 10:
 
-![Switchport 1-3](https://user-images.githubusercontent.com/52206303/227767116-9fd42a82-a19c-44d8-b47c-0adfe80827a8.png)
+![Пинг](https://user-images.githubusercontent.com/52206303/227767002-12f83e48-e4e2-4c90-accc-f8525b308611.png)
 
 ## Вывод
 В ходе лабораторной работы я получил базовые навыки работы с IP-телефонией на базе Cisco Callmanager Express, смоделировал PC-сеть и сеть IP-телефонов. Для сети c телефонией настроил VLAN и DHCP-сервер, автоматически выдал телефонам линии и смог провести "звонок" между двумя устройствами.
