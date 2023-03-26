@@ -108,45 +108,13 @@ Date of finished: 19.03.2023
 
 ![image](https://user-images.githubusercontent.com/52206303/226315650-bfb2ea5d-4a1b-4c1a-9954-42d9e539b7ad.png)
 
+![DHCP на PC](https://user-images.githubusercontent.com/52206303/227766836-8e722a6b-219b-4578-8692-f6302ad59e1a.png)
 
-Теперь изменим имя роутера на CMERouter:
+![Звонок](https://user-images.githubusercontent.com/52206303/227766761-bb03eeab-dd3a-436e-9ffa-1c5cae681c0b.png)
 
-![CMERouter](https://user-images.githubusercontent.com/52206303/226183042-9f66b321-4995-436f-b3c2-94df677862f4.png)
+![Пинг](https://user-images.githubusercontent.com/52206303/227767002-12f83e48-e4e2-4c90-accc-f8525b308611.png)
 
-Назначим интерфейсу, к которому подсоединен коммутатор, IP-адрес 192.168.1.1:
-
-![Router Interface](https://user-images.githubusercontent.com/52206303/226183269-757ffa99-2dc7-4215-ba6c-3322ef237172.png)
-
-Настроим DHCP-сервер для автоматической настройки телефонов. Для этого создаем пул с TELEPHONY, назначаем ему сеть 192.168.1.0 и дефолтный роутер, который мы настроили в предыдущем пункте. При передаче голоса необходимо включить на DHCP опцию 150, чтобы телефоны импортировали настройки с TFTP (Trivial File Transfer Protocol):
-
-![DHCP](https://user-images.githubusercontent.com/52206303/226183436-1080cb51-1ad9-4811-84f2-fa271bbf4971.png)
-
-Устанавливаем максимальное количество номеров и телефонов, указываем адрес голосового шлюза и настраиваем автоматическое назначение линий:
-
-![Телефония](https://user-images.githubusercontent.com/52206303/226198806-a169e4b1-e586-4f1c-9927-306c83428f7d.png)
-
-Назначаем портам коммутатора VLAN:
-
-![Switch](https://user-images.githubusercontent.com/52206303/226185431-3541ee4d-1883-4630-92a4-bf14fc533823.png)
-
-Включаем все VLAN интерфейсы на коммутаторе и маршрутизаторе:
-```
-interface vlan1
-no shutdown
-```
-Проверим настройки отправив пинг с роутера на оба телефона:
-
-![Пинги](https://user-images.githubusercontent.com/52206303/226195067-9ffca045-838e-4703-a32d-77095acf734a.png)
-
-Пинги проходят, значит, сеть настроена корректно. Попробуем совершить "звонок":
-
-![Звонок](https://user-images.githubusercontent.com/52206303/226193811-9bbc4584-ccd8-4b84-b078-04332e41abcf.png)
-
-Звонок проходит успешно, можно послать короткое звуковое сообщение с одного телефона на другой. Протестировать работу перевода звонков, перехвата не предоставляется возможным, так как роутер не поддерживает эти функции.
-
-Диаграмма получившейся сети представлена на рисунке ниже:
-
-![Схема](https://user-images.githubusercontent.com/52206303/226196498-5caac890-59af-4a45-9cab-c994e4a3afd0.png)
+![Switchport 1-3](https://user-images.githubusercontent.com/52206303/227767116-9fd42a82-a19c-44d8-b47c-0adfe80827a8.png)
 
 ## Вывод
 В ходе лабораторной работы я получил базовые навыки работы с IP-телефонией на базе Cisco Callmanager Express, смоделировал PC-сеть и сеть IP-телефонов. Для сети c телефонией настроил VLAN и DHCP-сервер, автоматически выдал телефонам линии и смог провести "звонок" между двумя устройствами.
